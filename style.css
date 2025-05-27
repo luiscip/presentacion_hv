@@ -40,4 +40,33 @@ body {
     font-size: 18px;
     color: #555;
   }
+  .section {
+    margin-top: 30px;
+  }
+  
+  .section h2 {
+    color: #005bac;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .section p {
+    line-height: 1.6;
+  }
+  
+  ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+  }
+  
+  .contacto a {
+    color: #005bac;
+    text-decoration: none;
+  }
+  
+  .contacto a:hover {
+    text-decoration: underline;
+  }
   
