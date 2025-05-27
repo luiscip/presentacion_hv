@@ -72,4 +72,8 @@ body {
   .section strong {
     color: #333;
   }
-  
+.section.formacion h2,
+.section.cursos h2 {
+  font-style: italic;
+  color: #003366;
+}
