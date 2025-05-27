@@ -69,4 +69,7 @@ body {
   .contacto a:hover {
     text-decoration: underline;
   }
+  .section strong {
+    color: #333;
+  }
   
