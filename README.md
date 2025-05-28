@@ -56,11 +56,7 @@ Presentacion_hv/
    ```bash
    git clone https://github.com/tuusuario/Presentacion_hv.git
    ```
-2. Abre `index.html` en tu navegador.
-3. Para publicarlo en GitHub Pages:
-   - Ve a **Settings > Pages**
-   - Selecciona la rama principal y carpeta root (`/`)
-   - Accede a tu CV en: `https://tuusuario.github.io/Presentacion_hv/`
+2. Abre `index.html` en tu navegador y ya puedes verlo.
 
 ## 📢 Contacto
 
@@ -73,5 +69,3 @@ Si deseas contactarme:
 ---
 
 Gracias por visitar mi hoja de vida web. Estoy abierto a nuevas oportunidades profesionales y colaboraciones ☕️.
-
-> "La mejor forma de predecir el futuro es creándolo." — Peter Drucker
