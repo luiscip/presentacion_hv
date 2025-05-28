@@ -191,21 +191,21 @@ body {
   .formacion-item .nivel {
     color: #005bac;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
   
   .formacion-item .institucion {
     color: #444;
-    font-size: 15px;
+    font-size: 17px;
     margin-bottom: 2px;
     font-weight: normal;
   }
   
   .formacion-item .detalle {
     color: #444;
-    font-size: 15px;
+    font-size: 17px;
     margin-bottom: 2px;
   }
   
@@ -216,7 +216,7 @@ body {
   }
   
   .formacion-item li {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
   }
   
@@ -270,24 +270,49 @@ body {
   }
   
   .referencia-item {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   
   .referencia-item .nombre {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    color: #005bac;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
   
   .referencia-item .cargo {
-    font-size: 18px;
+    font-size: 17px;
     color: #444;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
   
   .referencia-item .contacto {
     font-size: 17px;
     color: #666;
+  }
+  .cert-link {
+    font-size: 14px;
+    color: #00aaff;
+    text-decoration: underline;
+    margin-left: 8px;
+  }
+  
+  .cert-link:hover {
+    color: #0077cc;
+  }
+  .mensaje-exito {
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
   }
   

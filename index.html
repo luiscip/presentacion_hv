@@ -132,50 +132,54 @@
 
       <section>
         <h2>Cursos y Certificaciones</h2>
+      
         <div class="formacion-item">
           <span class="nivel">Certificado</span>
-          <div class="titulo">🎓 Desarrollo de aplicaciones con interfaz grafica, manejo de eventos, clases y objetos: Java</div>
+          <div class="titulo">🎓 Desarrollo de aplicaciones con interfaz gráfica, manejo de eventos, clases y objetos: Java</div>
           <div class="institucion">Institución: Sena</div>
           <ul>
-            <li>Finalizado en 2023</li>
+            <li>Finalizado en 2023 <a href="docs/CertificadoDesarrolloLuisIzquierdo.pdf" class="cert-link" target="_blank">ver</a></li>
           </ul>
         </div>
+      
         <div class="formacion-item">
           <span class="nivel">Curso</span>
           <div class="titulo">Curso completo de Python 2024</div>
-          <div class="institucion">Udemy</div>
+          <div class="institucion">Institución: Udemy</div>
           <ul>
-            <li>Finalizado en 2024</li>
+            <li>Finalizado en 2024 </li>
           </ul>
         </div>
+      
         <div class="formacion-item">
           <span class="nivel">Curso</span>
           <div class="titulo">🎓 Curso de JavaScript desde cero</div>
           <div class="institucion">Institución: Platzi</div>
           <ul>
-            <li>En curso en 2025</li>
+            <li>En curso en 2025 </li>
           </ul>
         </div>
+      
         <div class="formacion-item">
           <span class="nivel">Certificado</span>
           <div class="titulo">🎓 Nivel de inglés: A2 - B1</div>
-          <div class="institucion">Institución: Colombo Americano, Fundacion Universitaria Compensar</div>
+          <div class="institucion">Institución: Colombo Americano, Fundación Universitaria Compensar</div>
           <ul>
-            <li>Finalizado en Colombo Americano en 2022</li>
-            <li>Finalizado en Fundacion Universitaria Compensar en 2024 como materia</li>
+            <li>Finalizado en Colombo Americano en 2022 <a href="docs/CertificaciónInglesLuisIzquierdo.pdf" class="cert-link" target="_blank">ver</a></li>
+            <li>Finalizado en Fundación Universitaria Compensar en 2024 como materia </li>
           </ul>
         </div>
-      </section>
+      </section>      
 
       <section>
         <h2>Referencias</h2>
         <div class="referencia-item">
-          <div class="nombre">👤 Steell Sebastian Beltrán Sánchez</div>
+          <div class="nombre">👤 <a href="https://www.linkedin.com/in/steell-sebastián-beltrán-sánchez-001715336/" target="_blank"><strong>Steell Sebastian Beltrán Sánchez</strong></a></div>
           <div class="cargo">🎓 Junior Developer</div>
           <div class="contacto">📱 +57 300 448 5869</div>
         </div>
         <div class="referencia-item">
-          <div class="nombre">👤 Juan Camilo Izquierdo Ordoñez</div>
+          <div class="nombre">👤 <a href="https://www.linkedin.com/in/steell-sebastián-beltrán-sánchez-001715336/" target="_blank"><strong>Juan Camilo Izquierdo Ordoñez</strong></a></div>
           <div class="cargo">🎓 Semi Senior Backend Developer</div>
           <div class="contacto">📱 +57 321 487 2013</div>
         </div>
@@ -183,7 +187,7 @@
 
       <section class="contacto-formulario">
         <h2>Formulario de contacto</h2>
-        <form action="#" method="post">
+        <form id="formulario-contacto" action="https://formspree.io/f/mgvkgkry" method="POST">
           <label for="nombre">Nombre:</label><br>
           <input type="text" id="nombre" name="nombre" required><br><br>
       
@@ -192,8 +196,14 @@
       
           <input type="submit" value="Enviar">
         </form>
-      </section>
+      
+        <!-- Alerta de éxito oculta inicialmente -->
+        <div id="mensaje-exito" class="mensaje-exito" style="display: none;">
+          ✅ Tu formulario fue enviado correctamente.
+        </div>
+      </section>      
     </div>
   </div>
+  <script src="formulario.js"></script>
 </body>
 </html>
