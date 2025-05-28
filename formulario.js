@@ -1,28 +1,60 @@
-const form = document.getElementById("formulario-contacto");
-const mensajeExito = document.getElementById("mensaje-exito");
-
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const data = new FormData(form);
-  const xhr = new XMLHttpRequest();
-  xhr.open(form.method, form.action);
-  xhr.setRequestHeader("Accept", "application/json");
-
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState !== XMLHttpRequest.DONE) return;
-    if (xhr.status === 200) {
-      form.reset();
-      mensajeExito.style.display = "block";
-
-      // Opcional: ocultar después de 5 segundos
-      setTimeout(() => {
-        mensajeExito.style.display = "none";
-      }, 5000);
-    } else {
-      alert("Hubo un problema al enviar el formulario. Intenta más tarde.");
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("formulario-contacto");
+    const mensajeExito = document.getElementById("mensaje-exito");
+    const botonEnviar = form.querySelector('input[type="submit"]');
+  
+    const tiempoEspera = 60; // segundos
+  
+    // Función para iniciar contador si es necesario
+    function verificarBloqueo() {
+      const ultimoEnvio = localStorage.getItem("ultimoEnvio");
+      if (!ultimoEnvio) return;
+  
+      const ahora = Date.now();
+      const restante = tiempoEspera - Math.floor((ahora - ultimoEnvio) / 1000);
+  
+      if (restante > 0) {
+        bloquearBoton(restante);
+      }
     }
-  };
-
-  xhr.send(data);
-});
+  
+    // Función para bloquear el botón y mostrar contador
+    function bloquearBoton(segundosIniciales) {
+      let segundos = segundosIniciales;
+      botonEnviar.disabled = true;
+      botonEnviar.value = `Espera ${segundos}s...`;
+  
+      const cuentaAtras = setInterval(() => {
+        segundos--;
+        botonEnviar.value = `Espera ${segundos}s...`;
+  
+        if (segundos <= 0) {
+          clearInterval(cuentaAtras);
+          botonEnviar.disabled = false;
+          botonEnviar.value = "Enviar";
+          localStorage.removeItem("ultimoEnvio");
+        }
+      }, 1000);
+    }
+  
+    // Escuchar envío del formulario
+    form.addEventListener("submit", () => {
+      // Guardar tiempo del envío en localStorage
+      localStorage.setItem("ultimoEnvio", Date.now());
+  
+      // Mostrar mensaje de éxito
+      setTimeout(() => {
+        mensajeExito.style.display = "block";
+        setTimeout(() => {
+          mensajeExito.style.display = "none";
+        }, 5000);
+      }, 1000);
+  
+      // Iniciar bloqueo
+      bloquearBoton(tiempoEspera);
+    });
+  
+    // Al cargar la página, revisar si ya estaba bloqueado
+    verificarBloqueo();
+  });
+  
