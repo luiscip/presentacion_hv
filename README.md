@@ -1,6 +1,7 @@
 # Presentación Hoja de Vida Web - Luis Izquierdo
 
 Este repositorio contiene una presentación web interactiva de mi hoja de vida (CV), desarrollada con HTML, CSS y JavaScript puro. El objetivo es mostrar de forma profesional mis habilidades, formación, proyectos, certificaciones y datos de contacto a potenciales empleadores.
+El link de la pagina es este: https://luiscip.github.io/presentacion_hv/
 
 ## 📁 Estructura del proyecto
 
