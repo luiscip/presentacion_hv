@@ -8,8 +8,12 @@ El link de la pagina es este: https://luiscip.github.io/presentacion_hv/
 ```
 Presentacion_hv/
 ├── docs/                       # Certificados PDF
+│   ├── CertificaciónInglesLuisIzquierdo.pdf
+│   ├── CertificadoDatabaseDesignLuisIzquierdo.pdf
+│   ├── CertificadoDatabaseFoundationsLuisIzquierdo.pdf
 │   ├── CertificadoDesarrolloLuisIzquierdo.pdf
-│   └── CertificaciónInglesLuisIzquierdo.pdf
+│   ├── CertificadoJavaFoundationsLuisIzquierdo.pdf
+│   └── CertificadoPythonLuisIzquierdo.pdf
 ├── img/                        # Imágenes usadas en la web
 │   ├── FotoHV.jpg
 │   └── menuPrincipal.png
